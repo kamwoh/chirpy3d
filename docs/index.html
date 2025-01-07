@@ -7,8 +7,7 @@
 
     <title>Chirpy3D</title>
 
-    <meta name="description"
-        content="Chirpy3D: Continuous Part Latents for Creative 3D Bird Generation">
+    <meta name="description" content="Chirpy3D: Continuous Part Latents for Creative 3D Bird Generation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <base href="/"> -->
@@ -33,8 +32,8 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
 
     <link rel="stylesheet" href="./css/dics.min.css">
     <script src="./js/dics.min.js"></script>
@@ -55,8 +54,8 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-               &#128038;<b>Chirpy3D</b>: Continuous Part Latents for Creative 3D Bird Generation &#128038;</br>
-<!--                 <small>
+                &#128038;<b>Chirpy3D</b>: Continuous Part Latents for Creative 3D Bird Generation &#128038;</br>
+                <!--                 <small>
                     arXiv
                 </small> -->
                 <img src="https://badges.toozhao.com/badges/01JFMD7JFE39ZNGHZ44KCKXS3S/blue.svg" />
@@ -67,32 +66,33 @@
                 <ul class="list-inline">
                     <li>
                         <a href="https://kamwoh.github.io/">
-                          Kam Woh Ng<sup>1</sup>
+                            Kam Woh Ng<sup>1</sup>
                         </a>
                     </li>
                     <li>
                         <a href="https://jingyang2017.github.io/">
-                          Jing Yang<sup>2</sup>
+                            Jing Yang<sup>2</sup>
                         </a>
                     </li>
                     <li>
-                        <a href="https://scholar.google.com/citations?user=8z00Mb8AAAAJ&hl=en&inst=15262737669262836719">
-                          Jia Wei Sii<sup>3</sup>
+                        <a
+                            href="https://scholar.google.com/citations?user=8z00Mb8AAAAJ&hl=en&inst=15262737669262836719">
+                            Jia Wei Sii<sup>3</sup>
                         </a>
                     </li>
                     <li>
                         <a href="https://jiankangdeng.github.io/">
-                          Jiankang Deng<sup>4</sup>
+                            Jiankang Deng<sup>4</sup>
                         </a>
                     </li>
                     <li>
                         <a href="https://kamwoh.github.io/">
-                          Chee Seng Chan<sup>3</sup>
+                            Chee Seng Chan<sup>3</sup>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.surrey.ac.uk/people/yi-zhe-song">
-                          Yi-Zhe Song<sup>1</sup>
+                            Yi-Zhe Song<sup>1</sup>
                         </a>
                     </li>
                     <li>
@@ -102,7 +102,7 @@
                     </li>
                     <li>
                         <a href="https://surrey-uplab.github.io/">
-                          Xiatian Zhu<sup>1</sup>
+                            Xiatian Zhu<sup>1</sup>
                         </a>
                     </li>
                 </ul>
@@ -129,14 +129,14 @@
                 <ul class="nav nav-pills nav-justified">
                     <li>
                         <a href="https://arxiv.org/abs/2311.15477">
-<!--                             <image src="/assets/img/merf/paper.png" height="120px"> -->
-                                <h4><strong>Paper</strong></h4>
+                            <!--                             <image src="/assets/img/merf/paper.png" height="120px"> -->
+                            <h4><strong>Paper</strong></h4>
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/kamwoh/chirpy3d">
-<!--                             <image src="/assets/img/merf/github_pad.png" height="120px"> -->
-                                <h4><strong>Code</strong></h4>
+                            <!--                             <image src="/assets/img/merf/github_pad.png" height="120px"> -->
+                            <h4><strong>Code</strong></h4>
                         </a>
                     </li>
                 </ul>
@@ -150,7 +150,7 @@
             </div>
         </div>
 
-<!--         <div class="row">
+        <!--         <div class="row">
             <div class="col-md-8 col-md-offset-1">
                 <h3>
                     Video
@@ -171,7 +171,14 @@
                     <b>Abstract</b>
                 </h3>
                 <p class="text-justify">
-                    In this paper, we push the boundaries of fine-grained 3D generation into truly creative territory. Current methods either lack intricate details or simply mimic existing objects -- we enable both. By lifting 2D fine-grained understanding into 3D through multi-view diffusion and modeling part latents as continuous distributions, we unlock the ability to generate entirely new, yet plausible parts through interpolation and sampling. A self-supervised feature consistency loss further ensures stable generation of these unseen parts. The result is the first system capable of creating novel 3D objects with species-specific details that transcend existing examples. While we demonstrate our approach on birds, the underlying framework extends beyond things that can chirp!
+                    In this paper, we push the boundaries of fine-grained 3D generation into truly creative territory.
+                    Current methods either lack intricate details or simply mimic existing objects -- we enable both. By
+                    lifting 2D fine-grained understanding into 3D through multi-view diffusion and modeling part latents
+                    as continuous distributions, we unlock the ability to generate entirely new, yet plausible parts
+                    through interpolation and sampling. A self-supervised feature consistency loss further ensures
+                    stable generation of these unseen parts. The result is the first system capable of creating novel 3D
+                    objects with species-specific details that transcend existing examples. While we demonstrate our
+                    approach on birds, the underlying framework extends beyond things that can chirp!
                 </p>
             </div>
         </div>
@@ -185,17 +192,24 @@
                 <img src="assets/fig2.png" style="width:100%;" class="img-responsive center-block" alt="overview">
                 <br>
                 <p class="text-justify">
-                    Overall architecture of our \( \textbf{Chirpy3D} \). \( \textbf{(Top)} \) During training, we fine-tune
+                    Overall architecture of our \( \textbf{Chirpy3D} \). \( \textbf{(Top)} \) During training, we
+                    fine-tune
                     a text-to-multi-view diffusion model (e.g., MVDream) with only 2D images of birds.
                     We aim to learn the underlying part information by modeling a continuous part-aware latent space.
                     This is achieved by learning a set of species embeddings \( \mathbf{e} \), project them into part
                     latents \( \mathbf{l} \) through learnable \( f \), decode into word embeddings \( \mathbf{t} \)
-                    through learnable \( g \) and insert into text prompt. We train the diffusion model with diffusion loss
-                    and multiple loss objectives -- \( \mathcal{L}_{\text{reg}} \) to model part latents as Gaussian distribution,
-                    \( \mathcal{L}_{\text{attn}} \) for part disentanglement, and our proposed \( \mathcal{L}_{\text{cl}} \)
-                    to enhance visual coherency. \( f \) and \( g \) are trainable modules. For efficient training, we added
-                    LoRA layers into cross-attention layers of the U-Net. \( \textbf{(Bottom)} \) During inference, we can first
-                    preview multi-view images by selecting desired part latents as condition before turning them into 3D representations
+                    through learnable \( g \) and insert into text prompt. We train the diffusion model with diffusion
+                    loss
+                    and multiple loss objectives -- \( \mathcal{L}_{\text{reg}} \) to model part latents as Gaussian
+                    distribution,
+                    \( \mathcal{L}_{\text{attn}} \) for part disentanglement, and our proposed \(
+                    \mathcal{L}_{\text{cl}} \)
+                    to enhance visual coherency. \( f \) and \( g \) are trainable modules. For efficient training, we
+                    added
+                    LoRA layers into cross-attention layers of the U-Net. \( \textbf{(Bottom)} \) During inference, we
+                    can first
+                    preview multi-view images by selecting desired part latents as condition before turning them into 3D
+                    representations
                     (e.g., NeRF) through SDS loss \( \mathcal{L}_\text{SDS} \).
                 </p>
             </div>
@@ -207,7 +221,8 @@
                     <b>Multiview Generation</b>
                 </h3>
 
-                Not only we can generate multiview images of existing classes, we can also generate hybrid version of them (<b>randomly interpolated</b> for each part).
+                Not only we can generate multiview images of existing classes, we can also generate hybrid version of
+                them (<b>randomly interpolated</b> for each part).
 
                 <br>
                 <br>
@@ -219,33 +234,48 @@
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/cls/cls000.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls000_cls006.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls006.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/cls/cls000.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls000_cls006.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls006.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/cls/cls013.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls013_cls015.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls015.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/cls/cls013.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls013_cls015.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls015.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/cls/cls016.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls016_cls058.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls058.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/cls/cls016.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls016_cls058.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls058.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/cls/cls081.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls081_cls105.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls105.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/cls/cls081.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls081_cls105.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls105.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/cls/cls133.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls133_cls179.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/cls/cls179.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/cls/cls133.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls133_cls179.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/cls/cls179.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <br>
@@ -256,34 +286,49 @@
                 <br>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/random/seed91.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed104.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed117.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/random/seed91.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed104.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed117.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/random/seed130.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed143.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed156.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/random/seed130.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed143.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed156.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/random/seed208.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed221.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed234.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/random/seed208.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed221.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed234.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/random/seed286.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed299.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed312.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/random/seed286.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed299.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed312.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <img src="assets/random/seed325.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed338.png" style="width:32%;" class="img-responsive center-block" alt="overview">
-                    <img src="assets/random/seed351.png" style="width:32%;" class="img-responsive center-block" alt="overview">
+                    <img src="assets/random/seed325.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed338.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
+                    <img src="assets/random/seed351.png" style="width:32%;" class="img-responsive center-block"
+                        alt="overview">
                 </div>
             </div>
         </div>
@@ -291,37 +336,146 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>
-                    <b>3D Birds by SDS loss</b>
+                    <b>3D Birds</b>
                 </h3>
+
+                3D generation using <code>threestudio</code> with random sampled part latents.
+
+                <br>
                 <br>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
                     <video width="49%" autoplay loop muted inline playsinline>
-                        <source src="assets/videos/mix1.mp4" type="video/mp4">
+                        <source src="assets/videos/mix/mix1_whitebg.mp4" type="video/mp4">
                     </video>
 
                     <video width="49%" autoplay loop muted inline playsinline>
-                      <source src="assets/videos/mix2.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
-                    <video width="49%" autoplay loop muted inline playsinline>
-                        <source src="assets/videos/mix3.mp4" type="video/mp4">
-                    </video>
-
-                    <video width="49%" autoplay loop muted inline playsinline>
-                      <source src="assets/videos/mix6.mp4" type="video/mp4">
+                        <source src="assets/videos/mix/mix2_whitebg.mp4" type="video/mp4">
                     </video>
                 </div>
 
                 <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
                     <video width="49%" autoplay loop muted inline playsinline>
-                        <source src="assets/videos/mix5_cls16_72.mp4" type="video/mp4">
+                        <source src="assets/videos/mix/mix3_whitebg.mp4" type="video/mp4">
                     </video>
 
                     <video width="49%" autoplay loop muted inline playsinline>
-                      <source src="assets/videos/mix7.mp4" type="video/mp4">
+                        <source src="assets/videos/mix/mix6_whitebg.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/mix/mix5_cls16_72_whitebg.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/mix/mix7_whitebg.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/random/seed104.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/random/seed143.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/random/seed130.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/random/seed234.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/random/seed325.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/random/seed312.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <br>
+                some examples from CUB200.
+                <br>
+                <br>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls2.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls14.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls15.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls20.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls56.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls58.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls78.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls81.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls84.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls86.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls199.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="img-responsive center-block" style="display: flex; justify-content: space-between;">
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls163.mp4" type="video/mp4">
+                    </video>
+
+                    <video width="49%" autoplay loop muted inline playsinline>
+                        <source src="assets/videos/cls/cls165.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
