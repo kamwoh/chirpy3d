@@ -7,7 +7,7 @@
 
     <title>Chirpy3D</title>
 
-    <meta name="description" content="Chirpy3D: Continuous Part Latents for Creative 3D Bird Generation">
+    <meta name="description" content="Chirpy3D: Part-Aware Multi-View Diffusion for Creative Fine-Grained Object Generation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <base href="/"> -->
@@ -55,7 +55,7 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                &#128038;<b>Chirpy3D</b>: Creative Fine-grained 3D Object Fabrication via Part Sampling &#128038;</br>
+                &#128038;<b>Chirpy3D</b>: Part-Aware Multi-View Diffusion for Creative Fine-Grained Object Generation &#128038;</br>
 <!--                <img src="https://badges.toozhao.com/badges/01JFMD7JFE39ZNGHZ44KCKXS3S/blue.svg" />-->
                 <img src="https://views-counter.vercel.app/badge?pageId=kamwoh%2Fview-counters&leftColor=000000&rightColor=0adb3f&type=total&label=Viewers&style=none" alt="Views Counter">
             </h2>
@@ -176,14 +176,12 @@
                     <b>Abstract</b>
                 </h3>
                 <p class="text-justify">
-                    In this paper, we push the boundaries of fine-grained 3D generation into truly creative territory.
-                    Current methods either lack intricate details or simply mimic existing objects -- we enable both. By
-                    lifting 2D fine-grained understanding into 3D through multi-view diffusion and modeling part latents
-                    as continuous distributions, we unlock the ability to generate entirely new, yet plausible parts
-                    through interpolation and sampling. A self-supervised feature consistency loss further ensures
-                    stable generation of these unseen parts. The result is the first system capable of creating novel 3D
-                    objects with species-specific details that transcend existing examples. While we demonstrate our
-                    approach on birds, the underlying framework extends beyond things that can chirp!
+                    Understanding and generating the fine-grained structure of objects -- such as birds with species-specific beaks, wings, and tails -- is a long-standing challenge in computer vision. 
+                    We propose Chirpy3D, a part-aware multi-view diffusion framework that learns a hierarchical part latent space from unposed 2D images, using only off-the-shelf 2D part segmentation masks as spatial guidance -- without requiring any 3D data, camera poses, or manual part annotations. 
+                    This latent space enables intuitive part-level swapping, interpolation, and zero-shot composition. 
+                    A self-supervised feature consistency loss further encourages structural alignment across views, allowing coherent generation even with hybrid or unseen part combinations. 
+                    Our core contribution is the controllable part-aware latent space and multi-view diffusion model. 
+                    Downstream 3D generation is supported via any differentiable renderer such as NeRF but is orthogonal to the main framework, making Chirpy3D a flexible foundation for creative object generation in the absence of structured 3D data.
                 </p>
             </div>
         </div>
