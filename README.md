@@ -1,4 +1,4 @@
-# Chirpy3D: Creative Fine-grained 3D Object Fabrication via Part Sampling
+# Chirpy3D: Part-Aware Multi-View Diffusion for Creative Fine-Grained Object Generation
 
 ### Installation
 
